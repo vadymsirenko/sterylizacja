@@ -93,6 +93,7 @@ h6 {
   --bg: #f2f7fc;
   --card: #ffffff;
   --ink: #0c2440;
+  --text: #14171b;
   --shadow: rgba(13, 99, 255, 0.15);
   --line: #ce9772;
   --muted: #5c6b80;
@@ -635,10 +636,10 @@ footer {
   align-items: center;
   gap: 32px;
   grid-template-columns: 1.2fr 1fr 1fr;
-  background: var(--card);
+  /* background: var(--card);
   border: 1px solid var(--beige);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 22px; */
 }
 
 .footer-contact.contact-list {
@@ -670,7 +671,7 @@ footer {
   opacity: 0.9;
 }
 .brand-desc {
-  color: var(--muted);
+  color: var(--text);
   margin: 0.5rem 0 1rem;
 }
 .about-link {
@@ -703,8 +704,8 @@ footer {
   color: var(--ink);
 }
 .i {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   fill: currentColor;
   opacity: 0.9;
   flex: 0 0 20px;
@@ -750,7 +751,7 @@ footer {
   border-top: 1px solid var(--ring);
   padding: 10px 20px 14px;
   text-align: center;
-  color: var(--beige);
+  color: var(--text);
 }
 @media (max-width: 860px) {
   .footer-wrap {
