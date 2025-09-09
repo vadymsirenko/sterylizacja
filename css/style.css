@@ -191,6 +191,18 @@ a {
   font-weight: 700;
   color: var(--ink);
 }
+.header-phone.hide{
+  display: none;
+}
+.header-contacts{
+  display: none;
+}
+.header-contacts.show{
+  display: block;
+  padding-top: 25px;
+}
+
+
 .burger {
   display: none;
   flex-direction: column;
@@ -452,26 +464,40 @@ h5 {
   min-width: 280px;
 }
 
-/* Caption styles
-.sterilization-price caption,
-.table-caption {
-  caption-side: top;
-  font-weight: bold;
-  padding: 15px;
-  background: #0077b6;
-  color: #fff;
-  font-size: 1.2rem;
-  text-align: center;
-} */
 
+/* !====================================== */
+
+
+
+  /* --- Price container as horizontal row --- */
+  .price-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* allows wrapping on very small screens */
+  }
+
+
+
+
+
+
+/* !====================================== */
 .sterilization-price thead th {
   padding: 14px 18px;
-  text-align: left;
+  text-align: right;
   font-weight: 800;
   font-size: 14px;
   background: var(--accent);
   /* border-bottom: 1px solid var(--line); */
 }
+.sterilization-price thead th:first-child,
+.sterilization-price thead th:nth-child(2) {
+  text-align: left;
+}
+
 .sterilization-price tbody td {
   padding: 15px 18px;
   border-top: 1px solid var(--line);
@@ -481,7 +507,11 @@ h5 {
 .sterilization-price tbody tr:nth-child(2n) td {
   margin: 0 auto;
   background: var(--accent);
+  text-align: right;
 }
+.sterilization-price tbody tr:nth-child(2n) td:first-child {
+  text-align: left;
+} 
 .sterilization-price tbody tr:hover td {
   background: var(--accent);
 }
@@ -842,7 +872,7 @@ footer {
   .sterilization-price td:before {
     content: attr(data-label);
     font-weight: bold;
-    color: var(--ink);
+    color: var(--beige);
     display: block;
     margin-bottom: 4px;
   }
@@ -989,4 +1019,34 @@ footer {
 .calc .total {
   font-size: 18px;
   font-weight: bold;
+}
+
+/* Mobile card layout adjustments */
+@media (max-width: 768px) {
+  /* Price container as a row */
+  .price-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* allows wrapping on very small screens */
+  }
+
+  .price {
+    flex: 1;
+    background: #f8fafc;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .price:before {
+    content: attr(data-label);
+    display: block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #0077b6;
+    margin-bottom: 4px;
+  }
 }
