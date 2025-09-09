@@ -9,6 +9,11 @@
       content="Profesjonalna sterylizacja narzędzi i sprzętu dla salonów kosmetycznych – autoklawy, kontrola jakości, dezynfekcja. Szybko, bezpiecznie, z odbiorem i dostawą."
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/popup-calc.css" />
+
+    
   </head>
   <body id="top">
     <!-- Header -->
@@ -27,7 +32,7 @@
               ><a href="tel:+48600580984"><h5>+48 600 580 984</h5></a></span
             >
             <div class="header-contacts" id="header-contacts">
-                <ul class="contact-list social-list">
+              <ul class="contact-list social-list">
                 <li>
                   <a
                     href="https://www.google.com/maps/place/plac+%C5%9Awi%C4%99tego+J%C3%B3zefa+1,+62-800+Kalisz/@51.7627691,18.0894368,17z/data=!3m1!4b1!4m6!3m5!1s0x471ac5985ab64827:0xca1cb87e1acd7af2!8m2!3d51.7627658!4d18.0920117!16s%2Fg%2F11bw3zh0sm?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D"
@@ -265,103 +270,13 @@
         </div>
       </section>
 
-      <!-- Pricing
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2>Cennik – przykładowe pakiety</h2>
-        <div class="pricing2">
-          <article class="price2">
-            <h3>Start</h3>
-            <strong>89 zł / seria</strong>
-            <ul>
-              <li>Do 20 pakietów</li>
-              <li>Wskaźniki chemiczne</li>
-              <li>Raport PDF</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contacts">Zamów</a>
-          </article>
-          <article class="price2">
-            <h3>Standard</h3>
-            <strong>149 zł / seria</strong>
-            <ul>
-              <li>Do 50 pakietów</li>
-              <li>Test heliksowy</li>
-              <li>Odbiór i dostawa</li>
-            </ul>
-            <a class="btn" href="#contacts">Zamów</a>
-          </article>
-          <article class="price2">
-            <h3>Pro</h3>
-            <strong>249 zł / seria</strong>
-            <ul>
-              <li>Do 100 pakietów</li>
-              <li>Bowie‑Dick + heliks</li>
-              <li>Priorytet 24h</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contacts">Zamów</a>
-          </article>
-        </div>
-      </div>
-    </section> -->
-      <!-- <section id="price" class="section">
-      <div class="container">
-        <h2>Cennik — Sterylizacja narzędzi</h2>
-        <div class="sterilization-price">
-          <table>
-            <caption>
-              Taryfy (ceny w zł)
-            </caption>
-            <thead>
-              <tr>
-                <th>Nazwa</th>
-                <th>1 szt</th>
-                <th>do 5 szt</th>
-                <th>do 10 szt</th>
-                <th>do 15 szt</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Narzędzia pojedyncze – małe (np. frez)</td>
-                <td>5 zł</td>
-                <td>20 zł</td>
-                <td>40 zł</td>
-                <td>60 zł</td>
-              </tr>
-              <tr>
-                <td>Narzędzia pojedyncze – średnie (np. nożyczki)</td>
-                <td>6 zł</td>
-                <td>25 zł</td>
-                <td>50 zł</td>
-                <td>70 zł</td>
-              </tr>
-              <tr>
-                <td>Narzędzia pojedyncze – duże (np. ciężki)</td>
-                <td>7 zł</td>
-                <td>30 zł</td>
-                <td>60 zł</td>
-                <td>90 zł</td>
-              </tr>
-              <tr>
-                <td colspan="4">
-                  <strong>Pilna sterylizacja (czas 3 godziny)</strong>
-                </td>
-                <td><strong>120,00 zł</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="cta-row">
-          <button class="btn" type="submit">Kalkulator</button>
-        </div>
-      </div>
-    </section> -->
-      <!-- <section id="price" class="section">
+      <!-- Price -->
+      <section id="price" class="section">
         <div class="container">
           <h2>Cennik — Sterylizacja narzędzi</h2>
           <div class="sterilization-price">
             <table>
-              <caption>
+              <caption class="table-caption">
                 Taryfy (ceny w zł)
               </caption>
               <thead>
@@ -378,28 +293,40 @@
                   <td data-label="Nazwa">
                     Narzędzia pojedyncze – małe (np. frez)
                   </td>
-                  <td data-label="1 szt">5 zł</td>
-                  <td data-label="do 5 szt">20 zł</td>
-                  <td data-label="do 10 szt">40 zł</td>
-                  <td data-label="do 15 szt">60 zł</td>
+                  <td colspan="4">
+                    <div class="price-container">
+                      <div class="price" data-label="1 szt">5 zł</div>
+                      <div class="price" data-label="do 5 szt">20 zł</div>
+                      <div class="price" data-label="do 10 szt">40 zł</div>
+                      <div class="price" data-label="do 15 szt">60 zł</div>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Nazwa">
                     Narzędzia pojedyncze – średnie (np. nożyczki)
                   </td>
-                  <td data-label="1 szt">6 zł</td>
-                  <td data-label="do 5 szt">25 zł</td>
-                  <td data-label="do 10 szt">50 zł</td>
-                  <td data-label="do 15 szt">70 zł</td>
+                  <td colspan="4">
+                    <div class="price-container">
+                      <div class="price" data-label="1 szt">6 zł</div>
+                      <div class="price" data-label="do 5 szt">25 zł</div>
+                      <div class="price" data-label="do 10 szt">50 zł</div>
+                      <div class="price" data-label="do 15 szt">70 zł</div>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Nazwa">
                     Narzędzia pojedyncze – duże (np. ciężki)
                   </td>
-                  <td data-label="1 szt">7 zł</td>
-                  <td data-label="do 5 szt">30 zł</td>
-                  <td data-label="do 10 szt">60 zł</td>
-                  <td data-label="do 15 szt">90 zł</td>
+                  <td colspan="4">
+                    <div class="price-container">
+                      <div class="price" data-label="1 szt">7 zł</div>
+                      <div class="price" data-label="do 5 szt">30 zł</div>
+                      <div class="price" data-label="do 10 szt">60 zł</div>
+                      <div class="price" data-label="do 15 szt">90 zł</div>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Nazwa" colspan="4">
@@ -416,72 +343,7 @@
             </button>
           </div>
         </div>
-      </section> -->
-      <section id="price" class="section">
-  <div class="container">
-    <h2>Cennik — Sterylizacja narzędzi</h2>
-    <div class="sterilization-price">
-      <table>
-        <caption class="table-caption">
-          Taryfy (ceny w zł)
-        </caption>
-        <thead>
-          <tr>
-            <th>Nazwa</th>
-            <th>1 szt</th>
-            <th>do 5 szt</th>
-            <th>do 10 szt</th>
-            <th>do 15 szt</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Nazwa">Narzędzia pojedyncze – małe (np. frez)</td>
-            <td colspan="4">
-              <div class="price-container">
-                <div class="price" data-label="1 szt">5 zł</div>
-                <div class="price" data-label="do 5 szt">20 zł</div>
-                <div class="price" data-label="do 10 szt">40 zł</div>
-                <div class="price" data-label="do 15 szt">60 zł</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Nazwa">Narzędzia pojedyncze – średnie (np. nożyczki)</td>
-            <td colspan="4">
-              <div class="price-container">
-                <div class="price" data-label="1 szt">6 zł</div>
-                <div class="price" data-label="do 5 szt">25 zł</div>
-                <div class="price" data-label="do 10 szt">50 zł</div>
-                <div class="price" data-label="do 15 szt">70 zł</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Nazwa">Narzędzia pojedyncze – duże (np. ciężki)</td>
-            <td colspan="4">
-              <div class="price-container">
-                <div class="price" data-label="1 szt">7 zł</div>
-                <div class="price" data-label="do 5 szt">30 zł</div>
-                <div class="price" data-label="do 10 szt">60 zł</div>
-                <div class="price" data-label="do 15 szt">90 zł</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td data-label="Nazwa" colspan="4">
-              <strong>Pilna sterylizacja (czas 3 godziny)</strong>
-            </td>
-            <td data-label="Cena"><strong>120,00 zł</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="cta-row">
-      <button class="btn" type="submit" id="openPricing">Kalkulator</button>
-    </div>
-  </div>
-</section>
+      </section>
 
       <!-- Testimonials -->
       <section class="section">
@@ -607,7 +469,9 @@
                   </a>
                 </li>
               </ul>
-              <div class="contact-hours"><span>Godziny:</span> pn‑sb 10:00–14:00</div>
+              <div class="contact-hours">
+                <span>Godziny:</span> pn‑sb 10:00–14:00
+              </div>
             </div>
           </div>
           <form
@@ -756,7 +620,6 @@
     <div id="pricing-popup" class="popup-overlay">
       <div class="popup-content">
         <button class="popup-close">&times;</button>
-
         <!-- Sekcja cennika i kalkulatora -->
         <section class="section" id="pricing2">
           <div class="container">

@@ -1,0 +1,131 @@
+/* Footer */
+footer {
+  padding: 28px 0;
+  color: var(--ink);
+  text-align: center;
+}
+.site-footer {
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg), var(--accent));
+}
+.footer-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 20px 15px;
+  display: grid;
+  align-items: center;
+  gap: 32px;
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+.footer-contact.contact-list {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+  justify-content: center;
+  justify-items: center;
+}
+.footer-brand .brand-mark {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+}
+.brand,
+.about-link {
+  color: var(--text);
+  text-decoration: none;
+}
+.brand:hover {
+  opacity: 0.9;
+}
+.brand-desc {
+  color: var(--text);
+  margin: 0.5rem 0 1rem;
+}
+.about-link {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--ring);
+  border-radius: 12px;
+}
+.about-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
+}
+.contact-list p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.35rem 0;
+  color: var(--text);
+}
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+.contact-list a:hover {
+  color: var(--ink);
+}
+.i {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+  opacity: 0.9;
+  flex: 0 0 20px;
+}
+.copy-btn {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--ring);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.copy-btn:hover {
+  border-color: var(--accent);
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.social-list a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--ring);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.social-list a:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.footer-bottom {
+  border-top: 1px solid var(--ring);
+  padding: 10px 20px 14px;
+  text-align: center;
+  color: var(--text);
+}
+@media (max-width: 860px) {
+  .footer-wrap {
+    grid-template-columns: 1fr;
+    padding: 36px 16px;
+  }
+  .footer-social {
+    order: 3;
+  }
+}

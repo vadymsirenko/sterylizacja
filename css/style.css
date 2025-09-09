@@ -128,11 +128,7 @@ body.lock {
 }
 
 
-/* Blur page when popup active */
-.popup-overlay.active ~ .page-content,
-.page-content.blurred {
-  filter: blur(6px);
-}
+
 
 img {
   max-width: 100%;
@@ -148,113 +144,6 @@ a {
   padding: 0 20px;
 }
 
-/* Header */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--accent);
-  backdrop-filter: saturate(1.2) blur(8px);
-  border-bottom: 1px solid var(--beige);
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 10px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  color: var(--ink);
-}
-.logo img {
-  width: 120px;
-  height: 40px;
-}
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-.nav a {
-  font-weight: 600;
-  color: var(--muted);
-}
-.nav a:hover {
-  color: var(--ink);
-}
-.header-phone {
-  font-weight: 700;
-  color: var(--ink);
-}
-.header-phone.hide{
-  display: none;
-}
-.header-contacts{
-  display: none;
-}
-.header-contacts.show{
-  display: block;
-  padding-top: 25px;
-}
-
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  cursor: pointer;
-}
-.burger span {
-  width: 26px;
-  height: 2.5px;
-  background: var(--ink);
-  border-radius: 10px;
-  transition: 0.25s;
-}
-
-/* Mobile nav */
-@media (max-width: 860px) {
-  .nav {
-    position: fixed;
-    inset: 0 0 auto auto;
-    width: min(86vw, 380px);
-    height: 100vh;
-    background: var(--card);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
-    transform: translateX(100%);
-    transition: transform 0.35s;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 96px 28px 28px;
-    gap: 18px;
-  }
-  .nav.open {
-    transform: translateX(0);
-  }
-  .nav a {
-    font-size: 18px;
-  }
-  .header-phone {
-    margin-top: 8px;
-  }
-  .burger {
-    display: flex;
-  }
-}
-.burger.active span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-.burger.active span:nth-child(2) {
-  opacity: 0;
-}
-.burger.active span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
 
 /* Hero */
 .hero {
@@ -655,151 +544,7 @@ textarea {
   }
 }
 
-/* Footer */
-footer {
-  padding: 28px 0;
-  color: var(--ink);
-  text-align: center;
-}
-.site-footer {
-  color: var(--text);
-  background: linear-gradient(180deg, var(--bg), var(--accent));
-  /* border-top: 1px solid var(--ring); */
-}
-.footer-wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 48px 20px 15px;
-  display: grid;
-  align-items: center;
-  gap: 32px;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  /* background: var(--card);
-  border: 1px solid var(--beige);
-  border-radius: var(--radius);
-  padding: 22px; */
-}
 
-.footer-contact.contact-list {
-  display: grid;
-  gap: 10px;
-  color: var(--muted);
-  justify-content: center;
-  justify-items: center;
-}
-/* .footer-brand,
-.footer-contact,
-.footer-social {
-    background: var(--card);
-  border: 1px solid var(--beige);
-  border-radius: var(--radius);
-  padding: 22px;
-} */
-.footer-brand .brand-mark {
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: 0.4px;
-}
-.brand,
-.about-link {
-  color: var(--text);
-  text-decoration: none;
-}
-.brand:hover {
-  opacity: 0.9;
-}
-.brand-desc {
-  color: var(--text);
-  margin: 0.5rem 0 1rem;
-}
-.about-link {
-  display: inline-block;
-  padding: 0.5rem 0.8rem;
-  border: 1px solid var(--ring);
-  border-radius: 12px;
-}
-.about-link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.footer-contact h3,
-.footer-social h3 {
-  font-size: 1.5rem;
-  margin: 0 0 0.75rem;
-}
-.contact-list p {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin: 0.35rem 0;
-  color: var(--text);
-}
-.contact-list a {
-  color: var(--text);
-  text-decoration: none;
-}
-.contact-list a:hover {
-  color: var(--ink);
-}
-.i {
-  width: 30px;
-  height: 30px;
-  fill: currentColor;
-  opacity: 0.9;
-  flex: 0 0 20px;
-}
-.copy-btn {
-  margin-left: 0.5rem;
-  padding: 0.25rem 0.55rem;
-  font-size: 0.85rem;
-  border: 1px solid var(--ring);
-  border-radius: 10px;
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
-}
-.copy-btn:hover {
-  border-color: var(--accent);
-}
-.social-list {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.social-list a {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 1px solid var(--ring);
-  text-decoration: none;
-  color: var(--text);
-  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-.social-list a:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.footer-bottom {
-  border-top: 1px solid var(--ring);
-  padding: 10px 20px 14px;
-  text-align: center;
-  color: var(--text);
-}
-@media (max-width: 860px) {
-  .footer-wrap {
-    grid-template-columns: 1fr;
-    padding: 36px 16px;
-  }
-  .footer-social {
-    order: 3;
-  }
-}
 
 /* Responsive adjustments */
 /* --- Mobile card layout --- */
@@ -837,161 +582,6 @@ footer {
     font-size: 0.95rem;
   }
 
-  /* Add labels before each cell */
-  .sterilization-price td:before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: var(--beige);
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  /* Make urgent sterilization stand out */
-  .sterilization-price td strong {
-    color: green;
-  }
-
-  /* Full-width button */
-  .cta-row .btn {
-    width: 100%;
-    padding: 15px;
-  }
-}
-
-/* === Popup Overlay with Cinematic Fade === */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0); /* start transparent */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: background 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 9999;
-}
-
-.popup-overlay.active {
-  background: rgba(0, 0, 0, 0.6); /* fade to dark */
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Popup box */
-.popup-content {
-  /* background: #fff; */
-  max-width: 900px;
-  width: 100%;
-  max-height: 95%;
-  overflow-y: auto;
-  border-radius: 12px;
-  /* padding: 20px; */
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform: scale(0.9);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.popup-overlay.active .popup-content {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* Close button */
-.popup-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 28px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* Adaptive table */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.price-table th,
-.price-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
-
-.price-table th {
-  background: #f5f5f5;
-}
-
-/* Responsive table on small screens */
-@media (max-width: 768px) {
-  .price-table thead {
-    display: none;
-  }
-
-  .price-table tr {
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.4s ease;
-  }
-
-  .price-table tr.show {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  /* .price-table tr {
-    display: block;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-  } */
-
-  .price-table td {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 5px;
-    border: none;
-    border-bottom: 1px solid #eee;
-  }
-
-  .price-table td:last-child {
-    border-bottom: none;
-  }
-
-  .price-table td::before {
-    font-weight: bold;
-    content: attr(data-label);
-  }
-}
-
-/* Calculator summary */
-.calc {
-  border-top: 2px solid #ddd;
-  padding-top: 15px;
-}
-
-.calc .row,
-.calc .total {
-  margin: 10px 0;
-}
-
-.calc .total {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Mobile card layout adjustments */
-@media (max-width: 768px) {
   /* Price container as a row */
   .price-container {
     display: flex;
@@ -1015,7 +605,28 @@ footer {
     display: block;
     font-weight: bold;
     font-size: 0.8rem;
-    color: #0077b6;
+    color: var(--beige);
     margin-bottom: 4px;
   }
+
+  /* Add labels before each cell */
+  .sterilization-price td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--beige);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Make urgent sterilization stand out */
+  .sterilization-price td strong {
+    color: green;
+  }
+
+  /* Full-width button */
+  .cta-row .btn {
+    width: 100%;
+    padding: 15px;
+  }
 }
+
