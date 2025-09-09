@@ -409,38 +409,7 @@ h5 {
   }
 }
 
-/* Pricing */
-/* .pricing2 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-      .price2 {
-        background: var(--card);
-        border: 1px solid var(--beige);
-        border-radius: var(--radius);
-        padding: 22px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .price2 strong {
-        font-size: 28px;
-      }
-      .price2 ul {
-        margin: 0 0 8px 18px;
-        color: var(--muted);
-      }
-      @media (max-width: 920px) {
-        .pricing {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 620px) {
-        .pricing {
-          grid-template-columns: 1fr;
-        }
-      } */
+
 /* унікальні стилі для таблиці */
 .sterilization-price {
   width: 100%;
