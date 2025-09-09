@@ -596,6 +596,28 @@ blockquote footer {
   color: var(--ink);
   font-weight: 700;
 }
+.contact-list.social-list{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-list.social-list .i {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  opacity: 0.9;
+  fill: currentColor;
+}
+.contact-list.social-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 280px;
+  height: 20px;
+}
+
+
 form {
   display: grid;
   gap: 12px;
