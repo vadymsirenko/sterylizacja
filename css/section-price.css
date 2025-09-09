@@ -135,7 +135,7 @@
 
   /* Make urgent sterilization stand out */
   .sterilization-price td strong {
-    color: var(--brand);
+    color: var(--ink-secondary);
   }
 
   .sterilization-price tbody tr:nth-child(2n) td {
