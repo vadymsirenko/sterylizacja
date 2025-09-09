@@ -1,8 +1,10 @@
 // Burger menu
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
+const body = document.getElementById("top");
 burger?.addEventListener("click", () => {
   burger.classList.toggle("active");
+  body.classList.toggle("lock");
   const open = nav.classList.toggle("open");
   burger.setAttribute("aria-expanded", open ? "true" : "false");
 });
@@ -12,6 +14,7 @@ nav?.querySelectorAll("a").forEach((a) =>
     if (nav.classList.contains("open")) {
       nav.classList.remove("open");
       burger.classList.remove("active");
+      body.classList.remove("lock");
       burger.setAttribute("aria-expanded", "false");
     }
   })
