@@ -443,7 +443,7 @@ h5 {
   font-weight: 700;
   padding: 18px 18px 10px;
   color: var(--primary);
-  min-width: 300px;
+  min-width: 280px;
 }
 
 /* Caption styles
@@ -473,7 +473,8 @@ h5 {
   color: #1c2b40;
 }
 .sterilization-price tbody tr:nth-child(2n) td {
-  background: var(--accent);
+  margin: 0 auto;
+  background:var(--accent);
 }
 .sterilization-price tbody tr:hover td {
   background: var(--accent);
@@ -595,6 +596,11 @@ blockquote footer {
 .contact-list span {
   color: var(--ink);
   font-weight: 700;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .contact-list.social-list{
   display: flex;
@@ -798,8 +804,9 @@ footer {
   .sterilization-price td,
   .sterilization-price tr {
     display: block;
-    width: 100%;
-    min-width: 300px;
+    width: 95%;
+    min-width: 200px;
+    margin: 0 auto;
   }
 
   .sterilization-price thead {
@@ -827,14 +834,14 @@ footer {
   .sterilization-price td:before {
     content: attr(data-label);
     font-weight: bold;
-    color: #0077b6;
+    color: var(--ink);
     display: block;
     margin-bottom: 4px;
   }
 
   /* Make urgent sterilization stand out */
   .sterilization-price td strong {
-    color: #d00000;
+    color: green;
   }
 
   /* Full-width button */
