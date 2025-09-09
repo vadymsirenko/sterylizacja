@@ -97,12 +97,14 @@ h6 {
   --shadow: rgba(13, 99, 255, 0.15);
   --line: #ce9772;
   --muted: #5c6b80;
+  --brand-accent: rgba(13, 98, 255, 0.5);
   --brand: #0d63ff;
   --brand-ink: #ffffff;
   --accent: #ddecff;
   --ring: 0 0 0 4px rgba(13, 99, 255, 0.15);
   --radius: 18px;
   --beige: #ce9772;
+  --beige-opacity: rgb(235 162 113 / 42%);
   --alert: #d00000;
 }
 
@@ -145,7 +147,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(242, 247, 252, 0.75);
+  background: var(--accent);
   backdrop-filter: saturate(1.2) blur(8px);
   border-bottom: 1px solid var(--beige);
 }
@@ -299,14 +301,15 @@ h5 {
   padding: 13px 18px;
   border-radius: 12px;
   font-weight: 700;
-  box-shadow: inset 0px 0px 5px 0px var(--ink), 0 6px 16px var(--ink);
+  box-shadow: inset 0px 0px 5px 0px var(--beige);
+  border: 1px solid var(--beige);
   background: var(--brand);
   color: var(--brand-ink);
   min-width: 200px;
 }
 .btn:hover {
   opacity: 0.9;
-  box-shadow: 0 3px 10px var(--ink);
+  box-shadow: 0 3px 10px var(--muted);
 }
 .btn:active {
   box-shadow: none;
@@ -317,14 +320,14 @@ h5 {
   box-shadow: var(--ring);
 }
 .btn-ghost {
-  background: transparent;
+  background: var(--accent);
   color: var(--ink);
   box-shadow: none;
-  border: 1.5px solid var(--beige);
-  box-shadow: inset 0px 0px 5px 0px var(--ink);
+  border: 1px solid var(--beige);
+  box-shadow: inset 0px 0px 5px 0px var(--brand-accent);
 }
 .hero-card {
-  background: var(--card);
+  background: var(--beige-opacity);
   border-radius: var(--radius);
   padding: 16px;
   border: 1px solid var(--beige);
@@ -625,7 +628,7 @@ footer {
 }
 .site-footer {
   color: var(--text);
-  background: linear-gradient(180deg, var(--bg), var(--ink));
+  background: linear-gradient(180deg, var(--bg), var(--accent));
   /* border-top: 1px solid var(--ring); */
 }
 .footer-wrap {
