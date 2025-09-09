@@ -41,17 +41,16 @@
   font-weight: 700;
   color: var(--ink);
 }
-.header-phone.hide{
+.header-phone.hide {
   display: none;
 }
-.header-contacts{
+.header-contacts {
   display: none;
 }
-.header-contacts.show{
+.header-contacts.show {
   display: block;
   padding-top: 25px;
 }
-
 
 .burger {
   display: none;

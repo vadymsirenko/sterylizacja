@@ -1,0 +1,45 @@
+/* Hero */
+.hero {
+  padding: 48px 0;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: #104a9e;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 12px;
+  margin-bottom: 14px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 18px;
+  margin: 0 0 22px;
+}
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card {
+  background: var(--beige-opacity);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--beige);
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
