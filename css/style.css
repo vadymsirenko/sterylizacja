@@ -114,11 +114,14 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--ink);
   background: var(--bg);
+
 }
 
 /* Default page content (no blur) */
 .page-content {
   transition: filter 0.4s ease;
+     overflow-y: auto;
+  overflow: hidden;
 }
 
 /* Blur page when popup active */
@@ -617,9 +620,8 @@ blockquote footer {
 .contact-list.social-list a {
   display: flex;
   align-items: center;
-  gap: 10px;
-
-  width: 280px;
+  gap: 15px;
+  width: 100%;
   height: 20px;
 }
 
