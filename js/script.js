@@ -88,7 +88,7 @@ document.getElementById("y").textContent = new Date().getFullYear();
   openBtn.addEventListener("click", () => {
     popup.classList.add("active");
     pageContent.classList.add("blurred");
-
+    body.classList.toggle("lock");
     rows.forEach((row, index) => {
       setTimeout(() => {
         row.classList.add("show");
@@ -99,6 +99,7 @@ document.getElementById("y").textContent = new Date().getFullYear();
   function closePopup() {
     popup.classList.remove("active");
     pageContent.classList.remove("blurred");
+    body.classList.remove("lock");
     rows.forEach(row => row.classList.remove("show"));
   }
 

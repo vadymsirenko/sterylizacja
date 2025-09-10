@@ -14,8 +14,9 @@
   color: #104a9e;
   font-weight: 700;
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 6px 24px;
   margin-bottom: 14px;
+  text-align: center;
 }
 
 .lead {
