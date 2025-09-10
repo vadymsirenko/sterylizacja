@@ -198,6 +198,11 @@ a {
   border-radius: 10px;
   transition: 0.25s;
 }
+.opisy-text{
+  font-weight: 600;
+  color: var(--muted);
+  padding: 15px;
+}
 
 /* Mobile nav */
 @media (max-width: 860px) {
