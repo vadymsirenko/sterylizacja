@@ -622,12 +622,32 @@
 
     <!-- Popup overlay -->
     <div id="pricing-popup" class="popup-overlay">
-      <div class="popup-content">
+      <div class="red">
+        <div class="calc">
+      <h3>Podsumowanie</h3>
+      <div class="row" style="display: none">
+        <label><input type="checkbox" id="vat" /> Uwzględnij VAT 23%</label>
+      </div>
+      <div class="row" style="display: none">
+        <span>Suma netto:</span> <strong id="sumNetto">0 zł</strong>
+      </div>
+      <div class="row" style="display: none">
+        <span>VAT 23%:</span> <strong id="sumVat">0 zł</strong>
+      </div>
+      <div class="total">
+        Suma do zapłaty: <span id="sumTotal">0 zł</span>
+      </div>
+      <div class="note"  style="display: none">
+       Kwoty mają charakter orientacyjny – ostateczna wycena zależy od zakresu i wolumenu zlecenia.
+      </div>
+    </div>
         <button class="popup-close">&times;</button>
+      </div>
+      <div class="popup-content">
         <!-- Sekcja cennika i kalkulatora -->
-        <section class="section" id="pricing2">
+        <!-- <section class="section" id="pricing2">
           <div class="container">
-            <h2>KALKULATOR</h2>
+            <h2>KALKULATOR</h2> -->
            
  <div class="price-wrap">
     <div class="price-card">
@@ -799,31 +819,17 @@
         </tbody>
       </table>
     </div>
+     </div>
+      </div>
 
-    <div class="calc">
-      <h3>Podsumowanie</h3>
-      <div class="row" style="display: none">
-        <label><input type="checkbox" id="vat" /> Uwzględnij VAT 23%</label>
-      </div>
-      <div class="row" style="display: none">
-        <span>Suma netto:</span> <strong id="sumNetto">0 zł</strong>
-      </div>
-      <div class="row" style="display: none">
-        <span>VAT 23%:</span> <strong id="sumVat">0 zł</strong>
-      </div>
-      <div class="total">
-        Suma do zapłaty: <span id="sumTotal">0 zł</span>
-      </div>
+    <div class="calc"> 
+     
       <div class="note">
         Kwoty mają charakter orientacyjny – ostateczna wycena zależy od zakresu i wolumenu zlecenia.
       </div>
-    </div>
   </div>
-          </div>
-
-        </section>
-      </div>
-    </div>
+     
+   
 
     <script src="js/script.js"></script>
   </body>
