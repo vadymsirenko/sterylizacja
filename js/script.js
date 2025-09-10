@@ -39,6 +39,7 @@ nav?.querySelectorAll("a").forEach((a) =>
   const sumNettoEl = document.getElementById("sumNetto");
   const sumVatEl = document.getElementById("sumVat");
   const sumTotalEl = document.getElementById("sumTotal");
+  const sumTotalEl2 = document.getElementById("sumTotal2");
   function recalc() {
     let netto = 0;
     rows.forEach((row) => {
@@ -55,6 +56,7 @@ nav?.querySelectorAll("a").forEach((a) =>
     const vat = vatEl && vatEl.checked ? Math.round(netto * 0.23) : 0;
     sumVatEl.textContent = money(vat).replace("\u00A0", " ");
     sumTotalEl.textContent = money(netto + vat).replace("\u00A0", " ");
+    sumTotalEl2.textContent = money(netto + vat).replace("\u00A0", " ");
   }
   rows.forEach((r) =>
     r.querySelector(".qty").addEventListener("input", recalc)
