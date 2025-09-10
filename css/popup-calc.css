@@ -201,6 +201,18 @@
   .price-table td {
     padding: 8px 0;
   }
+  .price-table td:nth-child(1) {
+    font-weight: bold;
+    background: var(--accent);
+    border-radius: 12px;
+    padding: 5px 10px;
+  }
+  
+  .price-table td:nth-child(2) {
+    font-weight: bold;
+    color: var(--ink);
+  }
+
 
   .price-row {
     justify-content: space-between;
