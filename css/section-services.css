@@ -1,0 +1,42 @@
+/* Services */
+/* #services {
+  display: none;
+} */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--beige);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.card h3 {
+  margin: 8px 0 12px;
+}
+.card p {
+  color: var(--muted);
+  margin: 0;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 920px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

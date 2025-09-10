@@ -1,0 +1,150 @@
+/* унікальні стилі для таблиці */
+.sterilization-price {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #fbfdff;
+  margin-bottom: 15px;
+}
+.sterilization-price table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+.sterilization-price caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  padding: 18px 18px 10px;
+  color: var(--primary);
+  min-width: 280px;
+}
+
+/* --- Price container as horizontal row --- */
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* allows wrapping on very small screens */
+}
+
+.sterilization-price thead th {
+  padding: 14px 18px;
+  text-align: right;
+  font-weight: 800;
+  font-size: 14px;
+  background: var(--accent);
+  /* border-bottom: 1px solid var(--line); */
+}
+.sterilization-price thead th:first-child,
+.sterilization-price thead th:nth-child(2) {
+  text-align: left;
+}
+
+.sterilization-price tbody td {
+  padding: 15px 18px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: #1c2b40;
+}
+.sterilization-price tbody tr:nth-child(2n) td {
+  margin: 0 auto;
+  background: var(--accent);
+  text-align: right;
+}
+.sterilization-price tbody tr:nth-child(2n) td:first-child {
+  text-align: left;
+}
+/* .sterilization-price tbody tr:hover td {
+  background: var(--accent);
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sterilization-price table,
+  .sterilization-price thead,
+  .sterilization-price tbody,
+  .sterilization-price th,
+  .sterilization-price td,
+  .sterilization-price tr {
+    display: block;
+    width: 95%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+
+  .sterilization-price thead {
+    display: none; /* hide table header */
+  }
+
+  .sterilization-price tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .sterilization-price td {
+    text-align: left;
+    border: none;
+    position: relative;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Price container as a row */
+  .price-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    margin-top: 10px;
+    flex-wrap: wrap; /* allows wrapping on very small screens */
+  }
+
+  .price {
+    flex: 1;
+    background: #f8fafc;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .price:before {
+    content: attr(data-label);
+    display: block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--beige);
+    margin-bottom: 4px;
+  }
+
+  /* Add labels before each cell */
+  .sterilization-price td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--beige);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Make urgent sterilization stand out */
+  .sterilization-price td strong {
+    color: var(--ink-secondary);
+  }
+
+  .sterilization-price tbody tr:nth-child(2n) td {
+    text-align: left;
+  }
+
+  /* Full-width button */
+  .cta-row .btn {
+    width: 100%;
+    padding: 15px;
+  }
+}
