@@ -510,11 +510,11 @@
                 </li>
               </ul>
               <div class="contact-hours">
-                <span>Godziny:</span> pn‑sb 10:00–14:00
+                <span>Godziny:</span> pon‑sob 10:00–14:00
               </div>
             </div>
           </div>
-          <form
+          <!-- <form
             class="contact-card"
             onsubmit="event.preventDefault();alert('Dziękujemy! Skontaktujemy się niebawem.');this.reset();"
           >
@@ -532,7 +532,20 @@
               <textarea required placeholder="Jak możemy pomóc?"></textarea>
             </label>
             <button class="btn" type="submit">Wyślij</button>
-          </form>
+          </form> -->
+        <form id="contactForm" class="contact-card">
+  <h3>Wyślij zapytanie przez WhatsApp</h3>
+  <label>
+    <input name="name" required placeholder="Imię i nazwisko" />
+  </label>
+  <label>
+    <input type="email" name="email" required placeholder="Email" />
+  </label>
+  <label>
+    <textarea name="message" required placeholder="Jak możemy pomóc?"></textarea>
+  </label>
+  <button class="btn" type="submit">Wyślij na WhatsApp</button>
+</form>
         </div>
       </section>
 

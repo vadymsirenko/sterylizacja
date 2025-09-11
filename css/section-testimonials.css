@@ -2,7 +2,7 @@
 blockquote {
   background: var(--card);
   border-left: 6px solid var(--beige);
-  padding: 18px;
+  padding: 18px 40px;
   border-radius: 12px;
   margin: 0;
   color: var(--ink);

@@ -118,8 +118,9 @@ document.getElementById("y").textContent = new Date().getFullYear();
   // Optional parameters
  spaceBetween: 30,
       centeredSlides: true,
+      effect: 'fade',
       autoplay: {
-        delay: 2500,
+        delay: 5500,
         disableOnInteraction: false,
         reverseDirection: false,
       },
@@ -140,4 +141,42 @@ document.getElementById("y").textContent = new Date().getFullYear();
     el: '.swiper-scrollbar',
   },
 });
+
+
+  function isMobile() {
+    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+  }
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const phone = "48600580984"; // WhatsApp number
+
+    // 📩 Styled WhatsApp message with formatting & emojis
+    const text = `📩 *Nowa wiadomość z formularza* %0A%0A
+👤 *Imię i nazwisko:* ${name}%0A
+✉️ *Email:* ${email}%0A
+💬 *Wiadomość:* _${message}_`;
+
+    const appUrl = `whatsapp://send?phone=${phone}&text=${text}`;
+    const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+
+    if (isMobile()) {
+      let win = window.open(appUrl);
+
+      // Fallback to web if app isn’t installed
+      setTimeout(() => {
+        if (!win || win.closed) {
+          window.open(webUrl, "_blank");
+        }
+      }, 2000);
+    } else {
+      window.open(webUrl, "_blank");
+    }
+  });
 
