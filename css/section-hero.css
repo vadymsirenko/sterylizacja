@@ -24,6 +24,7 @@
   font-size: 18px;
   margin: 0 0 22px;
   text-indent: 30px;
+  text-align: justify;
 }
 .cta-row {
   display: flex;

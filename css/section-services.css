@@ -25,6 +25,7 @@
 .card p {
   color: var(--muted);
   margin: 0;
+  text-align: justify;
 }
 .icon {
   width: 40px;

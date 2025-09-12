@@ -2,9 +2,6 @@ body.lock {
   overflow: hidden;
 }
 
-
-
-
 img {
   max-width: 100%;
   display: block;
@@ -19,11 +16,11 @@ a {
   padding: 0 20px;
 }
 
-
 h1 {
   font-size: clamp(30px, 3.5vw, 52px);
   line-height: 1.1;
   margin: 0 0 14px;
+  text-align: left;
 }
 
 h3 {
@@ -41,7 +38,6 @@ h5 {
   line-height: 1.1;
   font-weight: 600;
 }
-
 
 .btn {
   display: inline-flex;
@@ -79,7 +75,6 @@ h5 {
   box-shadow: inset 0px 0px 5px 0px var(--brand-accent);
 }
 
-
 /* Section heading */
 .section {
   padding: 36px 0;
@@ -97,13 +92,21 @@ h5 {
   /* height: 300px; */
 }
 
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
 
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-    }
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-    }
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--beige);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--beige);
+}
