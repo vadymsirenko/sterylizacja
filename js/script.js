@@ -143,40 +143,84 @@ document.getElementById("y").textContent = new Date().getFullYear();
 });
 
 
-  function isMobile() {
-    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
-  }
+//   function isMobile() {
+//     return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+//   }
 
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+//   document.getElementById("contactForm").addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    const formData = new FormData(this);
+//     const formData = new FormData(this);
+//     const name = formData.get("name");
+//     const email = formData.get("email");
+//     const message = formData.get("message");
+
+//     const phone = "48600580984"; // WhatsApp number
+
+//     // 📩 Styled WhatsApp message with formatting & emojis
+//     const text = `📩 *Nowa wiadomość z formularza* %0A%0A
+// 👤 *Imię i nazwisko:* ${name}%0A
+// ✉️ *Email:* ${email}%0A
+// 💬 *Wiadomość:* _${message}_`;
+
+//     const appUrl = `whatsapp://send?phone=${phone}&text=${text}`;
+//     const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+
+//     if (isMobile()) {
+//       let win = window.open(appUrl);
+
+//       // Fallback to web if app isn’t installed
+//       setTimeout(() => {
+//         if (!win || win.closed) {
+//           window.open(webUrl, "_blank");
+//         }
+//       }, 2000);
+//     } else {
+//       window.open(webUrl, "_blank");
+//     }
+//   });
+function getFormData() {
+    const form = document.getElementById("contactForm");
+    const formData = new FormData(form);
     const name = formData.get("name");
-    const email = formData.get("email");
+    // const email = formData.get("email");
     const message = formData.get("message");
 
-    const phone = "48600580984"; // WhatsApp number
+    return { name, message };
+  }
 
-    // 📩 Styled WhatsApp message with formatting & emojis
-    const text = `📩 *Nowa wiadomość z formularza* %0A%0A
-👤 *Imię i nazwisko:* ${name}%0A
-✉️ *Email:* ${email}%0A
+  // WhatsApp send
+  document.getElementById("sendWhatsApp").addEventListener("click", function () {
+    const { name, message } = getFormData();
+    const phone = "48600580984"; // <-- WhatsApp number
+
+    const text = `👤 *Imię i nazwisko:* ${name}%0A
 💬 *Wiadomość:* _${message}_`;
 
-    const appUrl = `whatsapp://send?phone=${phone}&text=${text}`;
-    const webUrl = `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+    const url = isMobile
+      ? `whatsapp://send?phone=${phone}&text=${text}`
+      : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
 
-    if (isMobile()) {
-      let win = window.open(appUrl);
+    const confirmSend = confirm("✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć WhatsApp.");
+    if (confirmSend) {
+      window.open(url, "_blank");
+      document.getElementById("contactForm").reset();
+    }
+  });
 
-      // Fallback to web if app isn’t installed
-      setTimeout(() => {
-        if (!win || win.closed) {
-          window.open(webUrl, "_blank");
-        }
-      }, 2000);
-    } else {
-      window.open(webUrl, "_blank");
+  // Messenger send
+  document.getElementById("sendMessenger").addEventListener("click", function () {
+    const { name, message } = getFormData();
+
+    const pageId = "61578335196833"; // <-- Facebook Page username or ID
+    const refText = encodeURIComponent(`Imię: ${name}, Wiadomość: ${message}`);
+    const url = `https://m.me/${pageId}?ref=${refText}`;
+
+    const confirmSend = confirm("✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć Messenger.");
+    if (confirmSend) {
+      window.open(url, "_blank");
+      document.getElementById("contactForm").reset();
     }
   });
 
