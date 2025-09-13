@@ -4,7 +4,7 @@ const nav = document.getElementById("nav");
 const body = document.getElementById("top");
 const aboutHeader = document.getElementById("header-about");
 const phoneHeader = document.getElementById("header-phone");
-const contactsHeader = document.getElementById("header-contacts"); 
+const contactsHeader = document.getElementById("header-contacts");
 
 burger?.addEventListener("click", () => {
   burger.classList.toggle("active");
@@ -85,118 +85,122 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
 document.getElementById("y").textContent = new Date().getFullYear();
 
 //poupup
- const popup = document.getElementById("pricing-popup");
-  const openBtn = document.getElementById("openPricing");
-  const closeBtn = document.querySelector(".popup-close");
-  const rows = document.querySelectorAll(".price-table tr");
-  const pageContent = document.querySelector(".page-content");
+const popup = document.getElementById("pricing-popup");
+const openBtn = document.getElementById("openPricing");
+const closeBtn = document.querySelector(".popup-close");
+const rows = document.querySelectorAll(".price-table tr");
+const pageContent = document.querySelector(".page-content");
 
-  openBtn.addEventListener("click", () => {
-    popup.classList.add("active");
-    pageContent.classList.add("blurred");
-    body.classList.toggle("lock");
-    rows.forEach((row, index) => {
-      setTimeout(() => {
-        row.classList.add("show");
-      }, index * 100);
-    });
+openBtn.addEventListener("click", () => {
+  popup.classList.add("active");
+  pageContent.classList.add("blurred");
+  body.classList.toggle("lock");
+  rows.forEach((row, index) => {
+    setTimeout(() => {
+      row.classList.add("show");
+    }, index * 100);
   });
+});
 
-  function closePopup() {
-    popup.classList.remove("active");
-    pageContent.classList.remove("blurred");
-    body.classList.remove("lock");
-    rows.forEach(row => row.classList.remove("show"));
+function closePopup() {
+  popup.classList.remove("active");
+  pageContent.classList.remove("blurred");
+  body.classList.remove("lock");
+  rows.forEach((row) => row.classList.remove("show"));
+}
+
+closeBtn.addEventListener("click", closePopup);
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    closePopup();
   }
+});
 
-  closeBtn.addEventListener("click", closePopup);
-
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
-      closePopup();
-    }
-  });
-
-  // Swiper
-  const swiper = new Swiper('.swiper', {
+// Swiper
+const swiper = new Swiper(".swiper", {
   // Optional parameters
- spaceBetween: 30,
-      centeredSlides: true,
-      // effect: 'fade',
-      centeredSlides: true,
-	loop: true,
-	// navigation: false,
-	noSwipingClass: 'swiper-slide',
-	slidesPerView: 'auto',
-	spaceBetween: 15,
-	speed: 12000,
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-        reverseDirection: false,
-      },
+  spaceBetween: 30,
+  centeredSlides: true,
+  // effect: 'fade',
+  centeredSlides: true,
+  loop: true,
+  // navigation: false,
+  noSwipingClass: "swiper-slide",
+  slidesPerView: "auto",
+  spaceBetween: 15,
+  speed: 12000,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    reverseDirection: false,
+  },
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: ".swiper-scrollbar",
   },
 });
 
-
 // Form send message to WhatsApp and Messenger
 function getFormData() {
-    const form = document.getElementById("contactForm");
-    const formData = new FormData(form);
-    const name = formData.get("name");
-    // const email = formData.get("email");
-    const message = formData.get("message");
+  const form = document.getElementById("contactForm");
+  const formData = new FormData(form);
+  const name = formData.get("name");
+  // const email = formData.get("email");
+  const message = formData.get("message");
 
-    return { name, message };
-  }
+  return { name, message };
+}
 
-  // WhatsApp send
-  document.getElementById("sendWhatsApp").addEventListener("click", function () {
-    const { name, message } = getFormData();
-    const phone = "48600580984"; // <-- WhatsApp number
+// WhatsApp send
+document.getElementById("sendWhatsApp").addEventListener("click", function () {
+  const { name, message } = getFormData();
+  const phone = "48600580984"; // <-- WhatsApp number
 
-    const text = `👤 *Imię i nazwisko:* ${name}%0A
+  const text = `👤 *Imię i nazwisko:* ${name}%0A
 💬 *Wiadomość:* _${message}_`;
 
-    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
-    const url = isMobile
-      ? `whatsapp://send?phone=${phone}&text=${text}`
-      : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
+    navigator.userAgent
+  );
+  const url = isMobile
+    ? `whatsapp://send?phone=${phone}&text=${text}`
+    : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
 
-    const confirmSend = confirm("✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć WhatsApp.");
-    if (confirmSend) {
-      window.open(url, "_blank");
-      document.getElementById("contactForm").reset();
-    }
-  });
+  const confirmSend = confirm(
+    "✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć WhatsApp."
+  );
+  if (confirmSend) {
+    window.open(url, "_blank");
+    document.getElementById("contactForm").reset();
+  }
+});
 
-  // Messenger send
-  document.getElementById("sendMessenger").addEventListener("click", function () {
-    const { name, message } = getFormData();
+// Messenger send
+document.getElementById("sendMessenger").addEventListener("click", function () {
+  const { name, message } = getFormData();
 
-    const pageId = "61578335196833"; // <-- Facebook Page username or ID
-    const refText = encodeURIComponent(`Imię: ${name}, Wiadomość: ${message}`);
-    const url = `https://m.me/${pageId}?ref=${refText}`;
+  const pageId = "61578335196833"; // <-- Facebook Page username or ID
+  const refText = encodeURIComponent(`Imię: ${name}, Wiadomość: ${message}`);
+  const url = `https://m.me/${pageId}?ref=${refText}`;
 
-    const confirmSend = confirm("✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć Messenger.");
-    if (confirmSend) {
-      window.open(url, "_blank");
-      document.getElementById("contactForm").reset();
-    }
-  });
-
+  const confirmSend = confirm(
+    "✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć Messenger."
+  );
+  if (confirmSend) {
+    window.open(url, "_blank");
+    document.getElementById("contactForm").reset();
+  }
+});
