@@ -1,12 +1,27 @@
 /* Header */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
-  background: var(--accent);
-  backdrop-filter: saturate(1.2) blur(8px);
+  /* background: var(--accent); */
+  backdrop-filter: saturate(1.5) blur(8px);
   border-bottom: 1px solid var(--beige);
+  width: 100%;
+  margin: 0 auto;
 }
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--brand);
+  opacity: 0.1;
+}
+
 .header-inner {
   display: flex;
   align-items: center;

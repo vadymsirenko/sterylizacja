@@ -1,6 +1,6 @@
 /* Hero */
 .hero {
-  padding: 48px 0;
+  padding: 108px 0 48px;
 }
 .hero-grid {
   display: grid;

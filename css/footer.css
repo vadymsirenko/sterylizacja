@@ -116,14 +116,17 @@ footer {
 }
 .footer-bottom {
   border-top: 1px solid var(--ring);
-  padding: 10px 20px 14px;
+  padding: 10px 20px 0px;
   text-align: center;
   color: var(--text);
 }
 @media (max-width: 860px) {
   .footer-wrap {
     grid-template-columns: 1fr;
-    padding: 36px 16px;
+    padding: 36px 16px 15px;
+  }
+  .footer-contact {
+    order: 2;
   }
   .footer-social {
     order: 3;

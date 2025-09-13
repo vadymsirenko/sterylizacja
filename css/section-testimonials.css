@@ -1,12 +1,17 @@
 /* Testimonials */
 blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   background: var(--card);
   border-left: 6px solid var(--beige);
   text-align: justify;
-  padding: 18px 40px;
+  padding: 18px 40px 0px;
   border-radius: 12px;
   margin: 0;
   color: var(--ink);
+  min-height: 300px;
 }
 blockquote footer {
   margin-top: 10px;
