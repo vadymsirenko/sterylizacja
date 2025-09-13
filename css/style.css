@@ -106,6 +106,7 @@ h5 {
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--beige);
+  display: none;
 }
 
 .swiper-pagination-bullet-active {
