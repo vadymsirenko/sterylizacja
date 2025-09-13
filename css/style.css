@@ -37,6 +37,7 @@ h5 {
   font-size: clamp(12px, 3.5vw, 20px);
   line-height: 1.1;
   font-weight: 600;
+  font-size: inherit;
 }
 
 .btn {

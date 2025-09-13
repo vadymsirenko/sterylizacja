@@ -2,11 +2,13 @@
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const body = document.getElementById("top");
+const aboutHeader = document.getElementById("header-about");
 const phoneHeader = document.getElementById("header-phone");
 const contactsHeader = document.getElementById("header-contacts"); 
 burger?.addEventListener("click", () => {
   burger.classList.toggle("active");
   body.classList.toggle("lock");
+  aboutHeader.classList.toggle("hide");
   phoneHeader.classList.toggle("hide");
   contactsHeader.classList.toggle("show");
   const open = nav.classList.toggle("open");
@@ -19,6 +21,7 @@ nav?.querySelectorAll("a").forEach((a) =>
       nav.classList.remove("open");
       burger.classList.remove("active");
       body.classList.remove("lock");
+      aboutHeader.classList.remove("hide");
       phoneHeader.classList.remove("hide");
       contactsHeader.classList.remove("show");
       burger.setAttribute("aria-expanded", "false");

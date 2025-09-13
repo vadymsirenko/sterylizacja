@@ -52,6 +52,12 @@
 .nav a:hover {
   color: var(--ink);
 }
+.header-about {
+  display: none;
+}
+.header-about.hide {
+  display: block;
+}
 .header-phone {
   font-weight: 700;
   color: var(--ink);
@@ -65,6 +71,11 @@
 .header-contacts.show {
   display: block;
   padding-top: 25px;
+  margin-top: auto;
+  margin-bottom: 35px;
+  border: 1px solid var(--beige);
+  border-radius: 10px;
+  padding: 35px 10px 20px;
 }
 
 .burger {
@@ -94,14 +105,21 @@
     transition: transform 0.35s;
     flex-direction: column;
     align-items: flex-start;
-    padding: 96px 28px 28px;
+    padding: 80px 20px 28px;
     gap: 18px;
   }
   .nav.open {
     transform: translateX(0);
+    display: flex;
+    gap: 25px;
   }
   .nav a {
+    display: inline-block;
+    width: 100%;
     font-size: 18px;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 5px;
+    color: var(--ink);
   }
   .header-phone {
     margin-top: 8px;
