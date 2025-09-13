@@ -5,6 +5,7 @@ const body = document.getElementById("top");
 const aboutHeader = document.getElementById("header-about");
 const phoneHeader = document.getElementById("header-phone");
 const contactsHeader = document.getElementById("header-contacts"); 
+
 burger?.addEventListener("click", () => {
   burger.classList.toggle("active");
   body.classList.toggle("lock");
@@ -121,10 +122,16 @@ document.getElementById("y").textContent = new Date().getFullYear();
   // Optional parameters
  spaceBetween: 30,
       centeredSlides: true,
-      effect: 'fade',
-      crossFade: true,
+      // effect: 'fade',
+      centeredSlides: true,
+	loop: true,
+	// navigation: false,
+	noSwipingClass: 'swiper-slide',
+	slidesPerView: 'auto',
+	spaceBetween: 15,
+	speed: 12000,
       autoplay: {
-        delay: 7000,
+        delay: 2000,
         disableOnInteraction: false,
         reverseDirection: false,
       },
