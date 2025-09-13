@@ -151,7 +151,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background: var(--accent);
   backdrop-filter: saturate(1.2) blur(8px);
-  border-bottom: 1px solid var(--beige);
+  border: 1px solid var(--beige);
   margin: auto;
 }
 
