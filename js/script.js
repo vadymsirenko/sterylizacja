@@ -122,19 +122,22 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
   spaceBetween: 30,
   centeredSlides: true,
-  // effect: 'fade',
+  effect: 'fade',
   centeredSlides: true,
   loop: true,
   // navigation: false,
   noSwipingClass: "swiper-slide",
   slidesPerView: "auto",
   spaceBetween: 15,
-  speed: 12000,
+  speed: 2500,
   autoplay: {
-    delay: 2000,
+    delay: 11000,
     disableOnInteraction: false,
     reverseDirection: false,
   },
+      keyboard: {
+        enabled: true,
+      },
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
