@@ -45,6 +45,9 @@
   width: 100%;
   height: 20px;
 }
+.contact-list.social-list a:hover {
+  color: var(--beige);
+}
 .contact-hours{
   margin: 0 auto;
 }
@@ -58,8 +61,8 @@ textarea {
   width: 100%;
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid #dbe6f5;
-  background: #fbfdff;
+  border: 1px solid var(--beige);
+  background: var(--card);
   font: inherit;
 }
 textarea {

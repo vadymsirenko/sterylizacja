@@ -34,12 +34,12 @@
 }
 
 .popup-overlay.active {
-  background: rgba(0, 0, 0, 0.6); /* fade to dark */
+  /* background: rgba(0, 0, 0, 0.6); fade to dark */
+  background: var(--brand-accent); /* fade to dark */
   opacity: 1;
   visibility: visible;
 }
 
-/* Popup box */
 .popup-content {
   max-width: 900px;
   width: 100%;
@@ -67,7 +67,6 @@
   opacity: 1;
 }
 
-/* Close button */
 .popup-close {
   position: absolute;
   top: 15px;
@@ -95,7 +94,6 @@
 .price-table {
   width: 100%;
   border-collapse: collapse;
-  /* background: #fff; */
 }
 
 .price-table th,
@@ -133,7 +131,7 @@
 }
 
 .unit {
-  color: #222;
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -144,15 +142,10 @@
   text-align: center;
 }
 
-/* .calc-header {
-  display: none;
-} */
-
 .calc {
-  background: #fff;
+  background: var(--card);
   max-width: 900px;
   width: 100%;
-  /* margin-top: 20px; */
   padding: 10px 15px 5px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -175,7 +168,7 @@
 .calc .total {
   font-weight: bold;
   font-size: 18px;
-  color: #222;
+  color: var(--ink);
 }
 
 .note {
@@ -183,11 +176,9 @@
   color: var(--beige);
 }
 
-/* --------- MOBILE --------- */
 @media (max-width: 768px) {
-
   .popup-content {
-  padding: 0 5px 130px 10px;
+    padding: 0 5px 130px 10px;
   }
   .price-table thead {
     display: none;
@@ -219,12 +210,11 @@
     border-radius: 12px;
     padding: 5px 10px;
   }
-  
+
   .price-table td:nth-child(2) {
     font-weight: bold;
     color: var(--ink);
   }
-
 
   .price-row {
     justify-content: space-between;
@@ -232,13 +222,8 @@
     margin-top: 5px;
   }
 
-  /* .calc-header {
-  display: block;
-} */
-
   .calc {
     position: fixed;
-    /* top: 0; */
     left: 0;
     right: 0;
     margin: 0;
