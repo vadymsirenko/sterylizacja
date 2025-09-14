@@ -207,3 +207,18 @@ document.getElementById("sendMessenger").addEventListener("click", function () {
     document.getElementById("contactForm").reset();
   }
 });
+
+// Scroll to top
+const scrollTop = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    scrollTop.classList.add("show");
+  } else {
+    scrollTop.classList.remove("show");
+  }
+});
+
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

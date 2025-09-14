@@ -87,7 +87,7 @@
 .burger span {
   width: 26px;
   height: 2.5px;
-  background: var(--ink);
+  background: var(--beige);
   border-radius: 10px;
   transition: 0.25s;
 }
