@@ -41,6 +41,21 @@
   border: 1px solid var(--beige);
 }
 
+.hero-card-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+border: 1px solid var(--beige);
+  border-radius: var(--radius);
+  padding: 5px 10px;
+}
+
+
 @media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
