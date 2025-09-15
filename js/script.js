@@ -191,22 +191,22 @@ document.getElementById("sendWhatsApp").addEventListener("click", function () {
   }
 });
 
-// Messenger send
-document.getElementById("sendMessenger").addEventListener("click", function () {
-  const { name, message } = getFormData();
+// // Messenger send
+// document.getElementById("sendMessenger").addEventListener("click", function () {
+//   const { name, message } = getFormData();
 
-  const pageId = "61578335196833"; // <-- Facebook Page username or ID
-  const refText = encodeURIComponent(`Imię: ${name}, Wiadomość: ${message}`);
-  const url = `https://m.me/${pageId}?ref=${refText}`;
+//   const pageId = "61578335196833"; // <-- Facebook Page username or ID
+//   const refText = encodeURIComponent(`Imię: ${name}, Wiadomość: ${message}`);
+//   const url = `https://m.me/${pageId}?ref=${refText}`;
 
-  const confirmSend = confirm(
-    "✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć Messenger."
-  );
-  if (confirmSend) {
-    window.open(url, "_blank");
-    document.getElementById("contactForm").reset();
-  }
-});
+//   const confirmSend = confirm(
+//     "✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć Messenger."
+//   );
+//   if (confirmSend) {
+//     window.open(url, "_blank");
+//     document.getElementById("contactForm").reset();
+//   }
+// });
 
 // Scroll to top
 const scrollTop = document.getElementById("scrollTop");
