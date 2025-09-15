@@ -122,7 +122,7 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
   spaceBetween: 30,
   centeredSlides: true,
-  effect: 'fade',
+  effect: "fade",
   centeredSlides: true,
   loop: true,
   // navigation: false,
@@ -135,9 +135,9 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
     reverseDirection: false,
   },
-      keyboard: {
-        enabled: true,
-      },
+  keyboard: {
+    enabled: true,
+  },
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
@@ -191,7 +191,6 @@ document.getElementById("sendWhatsApp").addEventListener("click", function () {
   }
 });
 
-
 // Scroll to top
 const scrollTop = document.getElementById("scrollTop");
 
@@ -205,4 +204,14 @@ window.addEventListener("scroll", () => {
 
 scrollTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Hide overlay after 3 seconds with fade-out
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const overlay = document.getElementById("consent-overlay");
+    overlay.style.opacity = "0";
+    // Remove from DOM after transition
+    setTimeout(() => overlay.remove(), 600);
+  }, 3000);
 });
