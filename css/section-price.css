@@ -3,7 +3,7 @@
   width: 100%;
   overflow-x: auto;
   border-radius: 18px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--primary);
   background: var(--card);
   margin-bottom: 15px;
 }
@@ -37,7 +37,7 @@
   font-weight: 800;
   font-size: 14px;
   background: var(--accent);
-  /* border-bottom: 1px solid var(--line); */
+  /* border-bottom: 1px solid var(--primary); */
 }
 .sterilization-price thead th:first-child,
 .sterilization-price thead th:nth-child(2) {
@@ -46,7 +46,7 @@
 
 .sterilization-price tbody td {
   padding: 15px 18px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--primary);
   background: var(--card);
   color: var(--ink-secondary);
 }
@@ -83,7 +83,7 @@
   .sterilization-price tr {
     margin-bottom: 15px;
     background: var(--card);
-    border: 1px solid var(--beige);
+    border: 1px solid var(--primary);
     border-radius: 10px;
     padding: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -124,7 +124,7 @@
     display: block;
     font-weight: bold;
     font-size: 0.8rem;
-    color: var(--beige);
+    color: var(--primary);
     margin-bottom: 4px;
   }
 
@@ -132,7 +132,7 @@
   .sterilization-price td:before {
     content: attr(data-label);
     font-weight: bold;
-    color: var(--beige);
+    color: var(--primary);
     display: block;
     margin-bottom: 4px;
   }

@@ -92,11 +92,13 @@ h6 {
 :root {
   --bg: #f2f7fc;
   --card: #ffffff;
+  --primary: #104a9e;
   --ink: #0c2440;
   --ink-secondary: #00265c;
   --ink-tertiary: #104a9e;
   --text: #14171b;
   --shadow: rgba(13, 99, 255, 0.15);
+  --line: #104a9e;
   --line: #ce9772;
   --muted: #5c6b80;
   --brand-accent: rgba(13, 98, 255, 0.5);

@@ -21,7 +21,7 @@
   font-family: sans-serif;
   color: var(--ink);
   backdrop-filter: saturate(1.5) blur(8px);
-  border: 1px solid var(--beige);
+  border: 1px solid var(--primary);
 }
 .consent-box::after {
   content: "";

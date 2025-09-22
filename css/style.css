@@ -56,8 +56,8 @@ h5 {
   padding: 13px 18px;
   border-radius: 12px;
   font-weight: 700;
-  box-shadow: inset 0px 0px 5px 0px var(--beige);
-  border: 1px solid var(--beige);
+  box-shadow: inset 0px 0px 5px 0px var(--primary);
+  border: 1px solid var(--primary);
   background: var(--brand);
   color: var(--brand-ink);
   min-width: 200px;
@@ -78,7 +78,7 @@ h5 {
   background: var(--accent);
   color: var(--ink);
   box-shadow: none;
-  border: 1px solid var(--beige);
+  border: 1px solid var(--primary);
   box-shadow: inset 0px 0px 5px 0px var(--brand-accent);
 }
 
@@ -111,12 +111,12 @@ h5 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--beige);
+  color: var(--primary);
   display: none;
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--beige);
+  background: var(--primary);
 }
 
 .scrollTop {
@@ -136,7 +136,7 @@ h5 {
   padding: 3px;
   text-align: center;
   backdrop-filter: saturate(1.2) blur(5px);
-  border: 1px solid var(--beige);
+  border: 1px solid var(--primary);
   box-shadow: inset 0px 0px 5px 0px var(--brand-accent);
   opacity: 0;
   pointer-events: none;

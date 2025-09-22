@@ -6,7 +6,7 @@
 }
 .contact-card {
   background: var(--card);
-  border: 1px solid var(--beige);
+  border: 1px solid var(--primary);
   border-radius: var(--radius);
   padding: 22px;
 }
@@ -46,7 +46,7 @@
   height: 20px;
 }
 .contact-list.social-list a:hover {
-  color: var(--beige);
+  color: var(--primary);
 }
 .contact-hours{
   margin: 0 auto;
@@ -61,7 +61,7 @@ textarea {
   width: 100%;
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid var(--beige);
+  border: 1px solid var(--primary);
   background: var(--card);
   font: inherit;
 }

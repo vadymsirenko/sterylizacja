@@ -5,7 +5,7 @@ blockquote {
   justify-content: center;
   gap: 10px;
   background: var(--card);
-  border-left: 6px solid var(--beige);
+  border-left: 6px solid var(--primary);
   text-align: justify;
   padding: 18px 40px 0px;
   border-radius: 12px;

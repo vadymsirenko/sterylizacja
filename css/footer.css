@@ -68,7 +68,7 @@ footer {
   text-decoration: none;
 }
 .contact-list a:hover {
-  color: var(--beige);
+  color: var(--primary);
 }
 .i {
   width: 30px;
@@ -112,7 +112,7 @@ footer {
 .social-list a:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
-  color: var(--beige);
+  color: var(--primary);
 }
 .footer-bottom {
   border-top: 1px solid var(--ring);
