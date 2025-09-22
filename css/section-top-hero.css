@@ -1,0 +1,102 @@
+.top-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 10%;
+  min-height: 100vh;
+  background: url("../img/top-hero-bg.png") no-repeat center/cover;
+}
+.top-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(180deg, var(--brand), var(--bg));
+  opacity: 0.3;
+}
+
+.top-hero-text {
+  max-width: 500px;
+}
+
+/* .top-hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+} */
+
+.top-hero-text h1 span {
+  color: #2ea89b;
+  font-size: 2.5rem;
+}
+
+.top-hero-text p {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.checklist {
+  margin-bottom: 4rem;
+}
+
+.checklist li {
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.checklist li::before {
+  content: "✔";
+  color: #2ea89b;
+  font-weight: bold;
+}
+
+.top-hero button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.top-hero button:hover {
+  background-color: #005ec4;
+}
+
+.top-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.top-hero-img img {
+  max-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .top-hero {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .top-hero-img {
+    margin-top: 2rem;
+  }
+}

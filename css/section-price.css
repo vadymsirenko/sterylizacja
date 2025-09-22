@@ -148,7 +148,6 @@
 
   /* Full-width button */
   .cta-row .btn {
-    width: 100%;
-    padding: 15px;
+    padding: 10px;
   }
 }
