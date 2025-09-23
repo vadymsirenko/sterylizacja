@@ -1,0 +1,42 @@
+.cross-link {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--primary);
+  border-left: 1px solid transparent;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 10px;
+  background: var(--accent);
+  gap: 10px;
+}
+
+.cross-link-logo {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  backdrop-filter: saturate(1.2) blur(5px);
+}
+
+.cross-link-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 99%;
+  z-index: -1;
+  background: var(--brand);
+  opacity: 0.1;
+}
