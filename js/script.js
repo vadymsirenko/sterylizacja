@@ -218,3 +218,11 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => overlay.remove(), 600);
   }, 3000);
 });
+
+// Add class hide after 3 seconds with transition 
+window.addEventListener("DOMContentLoaded", () => {
+  const linkCross = document.getElementById("cross-link");
+  setTimeout(() => {
+    linkCross.classList.add("hide");
+  }, 4000);
+});

@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 4rem 10%;
   min-height: 100vh;
-  background: url("../img/top-hero-bg.png") no-repeat center/cover;
+  background: url("../img/top-hero-bg.webp") no-repeat center/cover;
 }
 .top-hero::before {
   content: "";

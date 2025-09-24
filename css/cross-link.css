@@ -1,7 +1,7 @@
 .cross-link {
   position: absolute;
   left: 0;
-  bottom: 10%;
+  bottom: 5%;
   min-width: 30%;
   display: flex;
   align-items: center;
@@ -13,6 +13,16 @@
   padding: 10px;
   background: var(--accent);
   gap: 10px;
+  transition: all 0.4s ease;
+  transform: translateX(0%);
+}
+
+.cross-link.hide {
+  transform: translateX( -84%);
+}
+
+.cross-link.hide:hover {
+  transform: translateX(0%);
 }
 
 .cross-link-logo {
@@ -39,4 +49,35 @@
   z-index: -1;
   background: var(--brand);
   opacity: 0.1;
+}
+
+@media screen and  (max-width: 667px) {
+  .cross-link.hide {
+    transform: translateX(-83%);
+  }
+  
+}
+@media screen and  (max-width: 600px) {
+  .cross-link.hide {
+    transform: translateX(-82%);
+  }
+  
+}
+@media screen and  (max-width: 550px) {
+  .cross-link.hide {
+    transform: translateX(-81%);
+  }
+  
+}
+@media screen and  (max-width: 500px) {
+  .cross-link.hide {
+    transform: translateX(-80%);
+  }
+  
+}
+@media screen and  (max-width: 460px) {
+  .cross-link.hide {
+    transform: translateX(-78%);
+  }
+  
 }

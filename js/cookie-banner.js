@@ -32,13 +32,13 @@
         <h2>Pliki cookies i Google Analytics</h2>
         <p>Używamy niezbędnych plików cookies, aby strona działała prawidłowo.
            Za Twoją zgodą korzystamy z <strong>Google Analytics</strong> w celach analitycznych.
-           <a href="polityka-prywatnosci.html">Polityka prywatności</a>.
+           Korzystanie z naszej witryny oznacza, że będą one zamieszczane w Państwa urządzeniu. W każdym momencie można dokonać zmiany ustawień Państwa przeglądarki. Jeśli nie akceptujesz opuść tę stronę internetową.
         </p>
       </div>
-      <div class="cb-actions">
-        <button id="cb-settings">Ustawienia</button>
-        <button id="cb-necessary">Tylko niezbędne</button>
-        <button class="primary" id="cb-accept">Akceptuję wszystkie</button>
+      <div class="cb-actions cta-row">
+        <button class="btn-ghost" id="cb-settings">Ustawienia</button>
+        <button class="btn-ghost" id="cb-necessary">Tylko niezbędne</button>
+        <button class="primary btn" id="cb-accept">Akceptuję wszystkie</button>
       </div>
     `;
     document.body.appendChild(banner);
@@ -62,16 +62,16 @@
       <h3>Ustawienia plików cookies</h3>
       <p>Wybierz, które pliki cookies chcesz zaakceptować.</p>
       <div class="category"><div><strong>Niezbędne</strong><div style="font-size:0.9rem;color:#555">Zawsze włączone</div></div>
-           <input type="checkbox" checked disabled></div>
+           <input class="category-input" type="checkbox" checked disabled></div>
       <div class="category"><div><strong>Analityczne (Google Analytics)</strong>
            <div style="font-size:0.9rem;color:#555">Pomagają nam ulepszać stronę</div></div>
-           <input type="checkbox" id="cbc-analytics" ${c.analytics?'checked':''}></div>
+           <input class="category-input" type="checkbox" id="cbc-analytics" ${c.analytics?'checked':''}></div>
       <div class="category"><div><strong>Marketingowe</strong>
            <div style="font-size:0.9rem;color:#555">Spersonalizowane reklamy</div></div>
-           <input type="checkbox" id="cbc-marketing" ${c.marketing?'checked':''}></div>
-      <div class="actions">
-         <button id="cancel-settings">Anuluj</button>
-         <button id="save-settings" class="primary">Zapisz wybór</button>
+           <input class="category-input" type="checkbox" id="cbc-marketing" ${c.marketing?'checked':''}></div>
+      <div class="cta-row">
+         <button class="cookie-actions btn btn-ghost" id="cancel-settings">Anuluj</button>
+         <button class="cookie-actions btn" id="save-settings" >Zapisz wybór</button>
       </div>
     `;
     backdrop.appendChild(modal);
