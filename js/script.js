@@ -220,9 +220,18 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Add class hide after 3 seconds with transition 
+const linkCross = document.getElementById("cross-link");
 window.addEventListener("DOMContentLoaded", () => {
-  const linkCross = document.getElementById("cross-link");
   setTimeout(() => {
+    linkCross.classList.add("hide");
+  }, 4000);
+});
+
+linkCross?.addEventListener("click", () => {
+  linkCross.classList.toggle("hide");
+  linkCross.classList.toggle("show");
+  setTimeout(() => {
+    linkCross.classList.remove("show");
     linkCross.classList.add("hide");
   }, 4000);
 });
