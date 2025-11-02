@@ -1,0 +1,41 @@
+.lws-link {
+  min-width: 250px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #104a9e;
+  border-radius: 35px;
+  padding: 5px;
+  background: #ddecff;
+  gap: 10px;
+  transition: all 0.4s ease;
+  transform: translateX(0%);
+  margin-top: 30px;
+}
+
+.lws-link-title {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #104a9e;
+  margin-left: 15px;
+}
+
+.lws-link-title span {
+  color: #104a9e;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.lws-link-logo {
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  backdrop-filter: saturate(1.2) blur(5px);
+}
